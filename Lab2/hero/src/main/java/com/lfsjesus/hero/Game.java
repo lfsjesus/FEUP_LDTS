@@ -13,8 +13,7 @@ import java.io.IOException;
 
 public class Game {
     private Screen screen;
-    private int x = 10;
-    private int y = 10;
+    Hero hero = new Hero(10, 10);
 
    public Game(int col, int row) throws IOException {
        TerminalSize terminalSize = new TerminalSize(col, row);
@@ -29,7 +28,7 @@ public class Game {
 
     public void draw() throws IOException {
         screen.clear();
-        screen.setCharacter(x, y, TextCharacter.fromCharacter('X')[0]);
+        screen.setCharacter(hero.getX(), hero.getY(), TextCharacter.fromCharacter('X')[0]);
         screen.refresh();
     }
 
@@ -50,16 +49,16 @@ public class Game {
     private void processKey(KeyStroke key) {
         switch(key.getKeyType()) {
             case ArrowUp:
-                y -= 1;
+                hero.moveUp();
                 break;
             case ArrowDown:
-                y += 1;
+                hero.moveDown();
                 break;
             case ArrowLeft:
-                x -= 1;
+                hero.moveLeft();
                 break;
             case ArrowRight:
-                x += 1;
+                hero.moveRight();
                 break;
         }
 
