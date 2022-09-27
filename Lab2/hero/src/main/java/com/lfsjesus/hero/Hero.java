@@ -1,5 +1,8 @@
 package com.lfsjesus.hero;
 
+import com.googlecode.lanterna.TextCharacter;
+import com.googlecode.lanterna.screen.Screen;
+
 public class Hero {
     private int x;
     private int y;
@@ -38,6 +41,10 @@ public class Hero {
 
     public void moveRight() {
         x += 1;
+    }
+
+    public void draw(Screen screen) {
+        screen.setCharacter(x, y, TextCharacter.fromCharacter('X')[0]);
     }
 
 }
