@@ -1,3 +1,5 @@
+package com.lfsjesus.hero;
+
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextCharacter;
 import com.googlecode.lanterna.screen.Screen;
