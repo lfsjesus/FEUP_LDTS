@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Game {
     private Screen screen;
-    Hero hero = new Hero(10, 10);
+    private Arena arena;
 
    public Game(int col, int row) throws IOException {
        TerminalSize terminalSize = new TerminalSize(col, row);
@@ -22,15 +22,18 @@ public class Game {
        screen.setCursorPosition(null); // we don't need a cursor
        screen.startScreen(); // screens must be started
        screen.doResizeIfNecessary(); // resize screen if necessary
-
+       arena = new Arena(col, row);
     }
 
-    public void draw() throws IOException {
+    private void draw() throws IOException {
         screen.clear();
-        hero.draw(screen);
+        arena.draw(screen);
         screen.refresh();
     }
 
+    private void processKey(KeyStroke key) {
+        arena.processKey(key);
+    }
     public void run() throws IOException {
        while (true) {
            draw();
@@ -44,27 +47,5 @@ public class Game {
            processKey(key);
        }
     }
-
-    private void moveHero (Position position) {
-        hero.setPosition(position);
-    }
-    private void processKey(KeyStroke key) {
-        switch(key.getKeyType()) {
-            case ArrowUp:
-                moveHero(hero.moveUp());
-                break;
-            case ArrowDown:
-                moveHero(hero.moveDown());
-                break;
-            case ArrowLeft:
-                moveHero(hero.moveLeft());
-                break;
-            case ArrowRight:
-                moveHero(hero.moveRight());
-                break;
-        }
-
-    }
-
 
 }
