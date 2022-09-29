@@ -77,17 +77,6 @@ public class Arena {
 
     }
 
-    public boolean canHeroMove(Position position) {
-        if (position.getX() > width - 1 || position.getX() < 0 || position.getY() > height - 1 || position.getY() < 0) return false;
-
-        for (Wall wall : walls) {
-            if (wall.getPosition().getX() == position.getX() && wall.getPosition().getY() == position.getY())
-                return false;
-        }
-
-        return true;
-    }
-
     private  List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
 
@@ -102,6 +91,17 @@ public class Arena {
         }
 
         return walls;
+    }
+
+    public boolean canHeroMove(Position position) {
+        if (position.getX() > width - 1 || position.getX() < 0 || position.getY() > height - 1 || position.getY() < 0) return false;
+
+        for (Wall wall : walls) {
+            if (wall.getPosition().equals(position))
+                return false;
+        }
+
+        return true;
     }
 
 }
