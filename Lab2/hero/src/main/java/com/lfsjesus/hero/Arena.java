@@ -78,7 +78,7 @@ public class Arena {
     }
 
     public void draw(TextGraphics graphics) {
-        graphics.setBackgroundColor(TextColor.Factory.fromString("#01579b"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#6495ED"));
         graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width, height), ' ');
         hero.draw(graphics);
 
