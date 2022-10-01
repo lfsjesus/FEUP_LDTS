@@ -8,16 +8,9 @@ public class Wall extends Element{
     public Wall(int x, int y) {
         super(x, y);
     }
-    public Position getPosition() {
-        return position;
-    }
-
-    public void setPosition(Position position) {
-        this.position = position;
-    }
 
     public void draw(TextGraphics graphics) {
-        graphics.setBackgroundColor(TextColor.Factory.fromString("#FF5722"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#7a51d0"));
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), " ");
     }
 

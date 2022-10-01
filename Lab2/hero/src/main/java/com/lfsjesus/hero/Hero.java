@@ -9,14 +9,6 @@ public class Hero extends Element{
     public Hero(int x, int y) {
         super(x,y);
     }
-    public Position getPosition() {
-        return position;
-    }
-
-    public void setPosition(Position position) {
-        this.position = position;
-    }
-
     public Position moveUp() {
         return new Position(position.getX(), position.getY() - 1);
     }
