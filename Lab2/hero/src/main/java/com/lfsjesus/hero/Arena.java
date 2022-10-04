@@ -15,6 +15,8 @@ public class Arena {
     private Hero hero;
     private int width;
     private int height;
+    private int points = 0;
+    private int life = 100;
     private List<Wall> walls;
     private List<Coin> coins;
     private List<Monster> monsters;
@@ -91,6 +93,12 @@ public class Arena {
         for (Monster monster : monsters) {
             monster.draw(graphics);
         }
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#000000"));
+        graphics.putString(new TerminalPosition(1, 0), "Points: " + Integer.toString(points) );
+
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#FF0000"));
+        graphics.putString(new TerminalPosition(width - 10, 0), "Life: " + Integer.toString(life) );
+        graphics.setForegroundColor(TextColor.Factory.fromString("#FFFFFF"));
 
     }
 
@@ -118,6 +126,18 @@ public class Arena {
         return coins;
     }
 
+    private void addCoins() {
+        Random random = new Random();
+        for (int i = 0; i < 5; i++)
+            coins.add(new Coin(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1));
+    }
+
+    private void addMonsters() {
+        Random random = new Random();
+        for (int i = 0; i < 5; i++)
+            monsters.add(new Monster(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1));
+    }
+
     private List<Monster> createMonsters() {
         Random random = new Random();
         ArrayList<Monster> monsters = new ArrayList<>();
@@ -128,11 +148,20 @@ public class Arena {
     }
 
     private void retrieveCoins() {
+        Random random = new Random();
         Iterator<Coin> itr = coins.iterator();
+        if (coins.size() == 0) {
+            addCoins();
+            itr = coins.iterator();
+            addMonsters();
+        }
         while(itr.hasNext()) {
             Coin coin = itr.next();
-            if (hero.getPosition().equals(coin.getPosition()))
+            if (hero.getPosition().equals(coin.getPosition())) {
                 itr.remove();
+                points += 2;
+            }
+
         }
     }
 
@@ -157,8 +186,12 @@ public class Arena {
     private void verifyMonsterCollisions() {
         for (Monster monster : monsters) {
             if (hero.getPosition().equals(monster.getPosition())) {
-                System.out.println("YOU DIED!");
-                System.exit(0);
+                if (life == 0) {
+                    System.out.println("YOU DIED!");
+                    System.exit(0);
+                }
+                else life -= 10;
+
             }
         }
     }
