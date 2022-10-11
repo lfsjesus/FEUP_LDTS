@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.numbers.ListSorterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-11T14:40:07" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.002">
+<testsuite name="com.aor.numbers.ListSorterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-11T15:03:27" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.002">
   <properties/>
   <testcase name="sorterbug_8726()" classname="com.aor.numbers.ListSorterTest" time="0.001"/>
   <testcase name="sort()" classname="com.aor.numbers.ListSorterTest" time="0.001"/>
