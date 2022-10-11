@@ -186,7 +186,7 @@ public class Arena {
     private void verifyMonsterCollisions() {
         for (Monster monster : monsters) {
             if (hero.getPosition().equals(monster.getPosition())) {
-                if (life == 0) {
+                if (life == 10) {
                     System.out.println("YOU DIED!");
                     System.exit(0);
                 }
