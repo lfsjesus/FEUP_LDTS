@@ -28,9 +28,9 @@ public class ListSorterTest {
     @Test
     public void sorterbug_8726() {
         ListSorter sorter = new ListSorter();
-        List<Integer> sorted = sorter.sort(Arrays.asList(1,2,4,2));
+        List<Integer> sorted = sorter.sort(Arrays.asList(1,2,-1,4,2));
 
-        Assertions.assertEquals(Arrays.asList(1,2,2,4), sorted);
+        Assertions.assertEquals(Arrays.asList(-1,1,2,2,4), sorted);
 
     }
 }

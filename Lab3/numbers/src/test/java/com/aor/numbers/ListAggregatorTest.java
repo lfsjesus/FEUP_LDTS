@@ -13,7 +13,7 @@ public class ListAggregatorTest {
 
     @BeforeEach
     public void setup() {
-        list = Arrays.asList(1,2,4,2,5);
+        list = Arrays.asList(1,-10, -3, 2,4,2,5, 100);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class ListAggregatorTest {
         ListAggregator aggregator = new ListAggregator();
         int sum = aggregator.sum(list);
 
-        Assertions.assertEquals(14, sum);
+        Assertions.assertEquals(101, sum);
     }
 
     @Test
@@ -29,24 +29,23 @@ public class ListAggregatorTest {
         ListAggregator aggregator = new ListAggregator();
         int max = aggregator.max(list);
 
-        Assertions.assertEquals(5, max);
+        Assertions.assertEquals(100, max);
     }
 
     @Test
     public void min() {
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
-
         ListAggregator aggregator = new ListAggregator();
         int min = aggregator.min(list);
 
-        Assertions.assertEquals(1, min);
+        Assertions.assertEquals(-10, min);
     }
 
     @Test
     public void distinct() {
-        //List<Integer> list = Arrays.asList(1,2,4,2,5);
+        GenericListDeduplicator deduplicator = Mockito.mock(GenericListDeduplicator.class);
+        Mockito.when(deduplicator.deduplicate(Mockito.anyList())).thenReturn(Arrays.asList(1, 2, 4, 5));
+
         ListAggregator aggregator = new ListAggregator();
-        ListDeduplicator deduplicator = new ListDeduplicator(new ListSorter());
         int distinct = aggregator.distinct(list, deduplicator);
         Assertions.assertEquals(4, distinct);
     }
