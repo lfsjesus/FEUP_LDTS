@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringTransformerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-11-08T10:12:32" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.016">
+<testsuite name="StringTransformerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-11-08T10:24:14" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.015">
   <properties/>
-  <testcase name="stringReplacer()" classname="StringTransformerTest" time="0.011"/>
-  <testcase name="stringDrink()" classname="StringTransformerTest" time="0.001"/>
-  <testcase name="stringInverter()" classname="StringTransformerTest" time="0.001"/>
+  <testcase name="stringReplacer()" classname="StringTransformerTest" time="0.01"/>
+  <testcase name="stringDrink()" classname="StringTransformerTest" time="0.0"/>
+  <testcase name="stringInverter()" classname="StringTransformerTest" time="0.0"/>
+  <testcase name="transformerGroup()" classname="StringTransformerTest" time="0.001"/>
   <testcase name="stringRecipe()" classname="StringTransformerTest" time="0.001"/>
   <testcase name="stringCaseChanger()" classname="StringTransformerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
