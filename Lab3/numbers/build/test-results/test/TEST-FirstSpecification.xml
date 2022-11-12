@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FirstSpecification" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-10-25T09:17:22" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.173">
+<testsuite name="FirstSpecification" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-11-12T00:07:17" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.175">
   <properties/>
-  <testcase name="one plus one should equal two" classname="FirstSpecification" time="0.147"/>
-  <testcase name="Should be able to remove from list" classname="FirstSpecification" time="0.017"/>
-  <testcase name="numbers to the power of two [a: 1, b: 2, c: 1, #0]" classname="FirstSpecification" time="0.002"/>
+  <testcase name="one plus one should equal two" classname="FirstSpecification" time="0.141"/>
+  <testcase name="Should be able to remove from list" classname="FirstSpecification" time="0.023"/>
+  <testcase name="numbers to the power of two [a: 1, b: 2, c: 1, #0]" classname="FirstSpecification" time="0.003"/>
   <testcase name="numbers to the power of two [a: 2, b: 2, c: 4, #1]" classname="FirstSpecification" time="0.0"/>
-  <testcase name="numbers to the power of two [a: 3, b: 2, c: 9, #2]" classname="FirstSpecification" time="0.001"/>
+  <testcase name="numbers to the power of two [a: 3, b: 2, c: 9, #2]" classname="FirstSpecification" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
