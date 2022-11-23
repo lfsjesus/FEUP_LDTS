@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pt.up.fe.ldts.example1.OrderSpockTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-23T14:24:38" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.013">
+<testsuite name="pt.up.fe.ldts.example1.OrderSpockTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-23T14:46:36" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.013">
   <properties/>
   <testcase name="Is Elegible For Free Delivery (Small)" classname="pt.up.fe.ldts.example1.OrderSpockTest" time="0.004"/>
   <testcase name="Is Elegible For Free Delivery (Large)" classname="pt.up.fe.ldts.example1.OrderSpockTest" time="0.0"/>
