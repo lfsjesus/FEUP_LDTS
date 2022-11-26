@@ -1,17 +1,17 @@
 package com.lfsjesus.lab6;
 
 public class StringDrink {
-    private String text;
+    private String _text;
     public StringDrink(String text) {
-        this.text = text;
+        this._text = text;
     }
 
     public String getText() {
-        return text;
+        return _text;
     }
 
     public void setText(String text) {
-        this.text = text;
+        this._text = text;
     }
 
 

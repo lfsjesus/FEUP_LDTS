@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Bar {
-    private List<BarObserver> observers;
+    protected List<BarObserver> observers;
 
     public Bar() {
         observers = new ArrayList<>();

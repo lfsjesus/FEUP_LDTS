@@ -1,15 +1,13 @@
 package com.lfsjesus.lab6;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StringBar extends Bar{
     private boolean happy = false;
 
     public StringBar() {
-
-    }
-    public StringBar(List<BarObserver> observers) {
-        super(observers);
+        observers = new ArrayList<>();
     }
 
     public void order(StringDrink drink, StringRecipe recipe) {

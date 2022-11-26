@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringTransformerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-11-17T13:54:16" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.007">
+<testsuite name="StringTransformerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-11-26T14:30:28" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.005">
   <properties/>
-  <testcase name="stringReplacer()" classname="StringTransformerTest" time="0.001"/>
-  <testcase name="stringDrink()" classname="StringTransformerTest" time="0.001"/>
+  <testcase name="stringReplacer()" classname="StringTransformerTest" time="0.0"/>
+  <testcase name="stringDrink()" classname="StringTransformerTest" time="0.0"/>
   <testcase name="stringInverter()" classname="StringTransformerTest" time="0.0"/>
-  <testcase name="orderStringRecipe()" classname="StringTransformerTest" time="0.001"/>
+  <testcase name="orderStringRecipe()" classname="StringTransformerTest" time="0.0"/>
   <testcase name="transformerGroup()" classname="StringTransformerTest" time="0.001"/>
-  <testcase name="stringRecipe()" classname="StringTransformerTest" time="0.001"/>
-  <testcase name="stringCaseChanger()" classname="StringTransformerTest" time="0.001"/>
+  <testcase name="stringRecipe()" classname="StringTransformerTest" time="0.0"/>
+  <testcase name="stringCaseChanger()" classname="StringTransformerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

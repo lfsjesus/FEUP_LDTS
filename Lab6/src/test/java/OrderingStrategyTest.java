@@ -37,6 +37,7 @@ public class OrderingStrategyTest {
         StringRecipe recipe = getRecipe();
         SmartStrategy strategy = new SmartStrategy();
         HumanClient client = new HumanClient(strategy);
+        stringBar.addObserver(client);
 // Recipe is ordered immediately as happy hour was already under way
         stringBar.startHappyHour();
         client.wants(drink, recipe, stringBar);
