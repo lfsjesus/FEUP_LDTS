@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pt.up.fe.ldts.example3.SimpleOrderSpockTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-23T15:51:59" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.006">
+<testsuite name="pt.up.fe.ldts.example3.SimpleOrderSpockTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-12T19:16:23" hostname="luis-VivoBook-ASUSLaptop-X521EQ-S533EQ" time="0.007">
   <properties/>
   <testcase name="Fixed Discount" classname="pt.up.fe.ldts.example3.SimpleOrderSpockTest" time="0.004"/>
-  <testcase name="Percentage Discount" classname="pt.up.fe.ldts.example3.SimpleOrderSpockTest" time="0.001"/>
-  <testcase name="No Discount" classname="pt.up.fe.ldts.example3.SimpleOrderSpockTest" time="0.0"/>
+  <testcase name="Percentage Discount" classname="pt.up.fe.ldts.example3.SimpleOrderSpockTest" time="0.002"/>
+  <testcase name="No Discount" classname="pt.up.fe.ldts.example3.SimpleOrderSpockTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

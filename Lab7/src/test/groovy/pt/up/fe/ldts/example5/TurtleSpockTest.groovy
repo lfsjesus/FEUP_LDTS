@@ -6,97 +6,97 @@ class TurtleSpockTest extends Specification {
 
     def 'Rotate Left'() {
         given:
-            def turtle = new Turtle(5, 5, new TurtleNorth());
+        def turtle = new Turtle(5, 5, 'N' as char);
 
         when:
-            turtle.execute('L' as char);
+        turtle.execute('L' as char);
 
         then:
-            new TurtleWest() == turtle.getDirection()
+        'W' == turtle.getDirection()
 
         and:
-            turtle.execute('L' as char);
+        turtle.execute('L' as char);
 
         then:
-            new TurtleSouth() == turtle.getDirection()
+        'S' == turtle.getDirection()
 
         and:
-            turtle.execute('L' as char);
+        turtle.execute('L' as char);
 
         then:
-            new TurtleEast() == turtle.getDirection()
+        'E' == turtle.getDirection()
 
         and:
-            turtle.execute('L' as char);
+        turtle.execute('L' as char);
 
         then:
-            new TurtleNorth() == turtle.getDirection()
+        'N' == turtle.getDirection()
 
         and:
-            5 == turtle.getRow()
-            5 == turtle.getColumn()
+        5 == turtle.getRow()
+        5 == turtle.getColumn()
     }
 
     def 'Rotate Right'() {
         given:
-            def turtle = new Turtle(5, 5, new TurtleNorth());
+        def turtle = new Turtle(5, 5, 'N' as char);
 
         when:
-            turtle.execute('R' as char);
+        turtle.execute('R' as char);
 
         then:
-            new TurtleEast() == turtle.getDirection()
+        'E' == turtle.getDirection()
 
         and:
-            turtle.execute('R' as char);
+        turtle.execute('R' as char);
 
         then:
-            new TurtleSouth() == turtle.getDirection()
+        'S' == turtle.getDirection()
 
         and:
-            turtle.execute('R' as char);
+        turtle.execute('R' as char);
 
         then:
-            new TurtleWest() == turtle.getDirection()
+        'W' == turtle.getDirection()
 
         and:
-            turtle.execute('R' as char);
+        turtle.execute('R' as char);
 
         then:
-            'N' == turtle.getDirection()
+        'N' == turtle.getDirection()
 
         and:
-            5 == turtle.getRow()
-            5 == turtle.getColumn()
+        5 == turtle.getRow()
+        5 == turtle.getColumn()
     }
 
     def 'Forward'() {
         given:
-            def turtleN = new Turtle(5, 5, new TurtleNorth())
-            def turtleW = new Turtle(5, 5, new TurtleWest());
-            def turtleS = new Turtle(5, 5, new TurtleSouth());
-            def turtleE = new Turtle(5, 5, new TurtleEast());
+        def turtleN = new Turtle(5, 5, 'N' as char)
+        def turtleW = new Turtle(5, 5, 'W' as char);
+        def turtleS = new Turtle(5, 5, 'S' as char);
+        def turtleE = new Turtle(5, 5, 'E' as char);
 
         when:
-            turtleN.execute('F' as char)
-            turtleW.execute('F' as char);
-            turtleS.execute('F' as char);
-            turtleE.execute('F' as char);
+        turtleN.execute('F' as char)
+        turtleW.execute('F' as char);
+        turtleS.execute('F' as char);
+        turtleE.execute('F' as char);
 
         then:
-            4 == turtleN.getRow()
-            5 == turtleN.getColumn()
+        4 == turtleN.getRow()
+        5 == turtleN.getColumn()
 
         and:
-            5 == turtleW.getRow()
-            4 == turtleW.getColumn()
+        5 == turtleW.getRow()
+        4 == turtleW.getColumn()
 
         and:
-            6 == turtleS.getRow()
-            5 == turtleS.getColumn()
+        6 == turtleS.getRow()
+        5 == turtleS.getColumn()
 
         and:
-            5 == turtleE.getRow()
-            6 == turtleE.getColumn()
+        5 == turtleE.getRow()
+        6 == turtleE.getColumn()
     }
 }
